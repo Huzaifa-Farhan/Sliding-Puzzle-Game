@@ -1,6 +1,13 @@
-*{margin:0;padding:0;box-sizing:border-box;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+*{ 
+    /* Resetting margin, padding, and box-sizing for all elements */
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 :root{
+    /* Defining custom CSS variables for color scheme */
     --bgcol:#37474F;
     --mcol0:#ec2828;
     --mcol1:#f32121;
@@ -11,69 +18,77 @@
     --darkcol:#263238;
 }
 
-
 body{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    padding-top:15vh;
-    background-color:var(--bgcol);
+    /* Styling the body element */
+    display:flex; /* Using flexbox for layout */
+    flex-direction:column; /* Flex direction is column */
+    align-items:center; /* Centering items horizontally */
+    padding-top:15vh; /* Padding from the top */
+    background-color:var(--bgcol); /* Background color from CSS variable */
 }
 
 #puzzle_container{
-    position: relative;
-    width: 50vh;
-    height:50vh;
-    background-color:var(--darkcol);
-    border-radius:8px;
-    border:1px solid var(--mcol0);
-    box-shadow:0px 8px 0px var(--mcol0);
+    /* Styling the puzzle container */
+    position: relative; /* Relative positioning */
+    width: 50vh; /* Width */
+    height:50vh; /* Height */
+    background-color:var(--darkcol); /* Background color from CSS variable */
+    border-radius:8px; /* Rounded corners */
+    border:1px solid var(--mcol0); /* Border color from CSS variable */
+    box-shadow:0px 8px 0px var(--mcol0); /* Box shadow for depth effect */
 }
 
 .puzzle_block{
-    position:absolute;
+    /* Styling each puzzle block */
+    position:absolute; /* Absolute positioning */
     left:0;
     top:0;
-    width:33.4%;
-    height:33.4%;
-    background-color:var(--txtcol1);
-    color:var(--whitecol);
-    font-size:10vh;
-    font-weight:bold;
-    text-align:center;
-    padding-top:3%;
-    cursor: pointer;
-    user-select:none;
-    transition:left 0.3s,top 0.3s;
+    width:33.4%; /* Width of each block */
+    height:33.4%; /* Height of each block */
+    background-color:var(--txtcol1); /* Background color from CSS variable */
+    color:var(--whitecol); /* Text color from CSS variable */
+    font-size:10vh; /* Font size */
+    font-weight:bold; /* Bold font weight */
+    text-align:center; /* Center text alignment */
+    padding-top:3%; /* Padding from the top */
+    cursor: pointer; /* Pointer cursor on hover */
+    user-select:none; /* Preventing text selection */
+    transition:left 0.3s,top 0.3s; /* Smooth transition for position changes */
 }
 
-/*difficulty container*/
+/* Styling the difficulty container */
 #difficulty_container{
-    display:flex;
-    flex-direction:row;
-    width:50vh;
-    height:10vh;
-    background-color:var(--darkcol);
-    border-radius:8px;
-    margin-top:22px;
+    display:flex; /* Using flexbox for layout */
+    flex-direction:row; /* Flex direction is row */
+    width:50vh; /* Width */
+    height:10vh; /* Height */
+    background-color:var(--darkcol); /* Background color from CSS variable */
+    border-radius:8px; /* Rounded corners */
+    margin-top:22px; /* Margin from the top */
 }
+
 .difficulty_button{
-    flex-grow:1;
-    background-color:inherit;
-    color:var(--mcol2);
-    text-align:center;
-    font-size:3vh;
-    font-weight:bold;
-    padding-top:5%;
-    margin:4px;
-    cursor: pointer;
-    transition:font-size 0.3s;
+    /* Styling each difficulty button */
+    flex-grow:1; /* Flex grow to fill space */
+    background-color:inherit; /* Inheriting background color */
+    color:var(--mcol2); /* Text color from CSS variable */
+    text-align:center; /* Center text alignment */
+    font-size:3vh; /* Font size */
+    font-weight:bold; /* Bold font weight */
+    padding-top:5%; /* Padding from the top */
+    margin:4px; /* Margin */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition:font-size 0.3s; /* Smooth transition for font size changes */
 }
+
 .difficulty_button:hover{
-    opacity:0.8;
-    font-size:3.5vh;
+    /* Hover effect for difficulty buttons */
+    opacity:0.8; /* Slightly transparent */
+    font-size:3.5vh; /* Increase font size */
 }
+
 .difficulty_button.active{
-    background-color:inherit;
-    color:var(--mcol0);
+    /* Active state for difficulty buttons */
+    background-color:inherit; /* Inheriting background color */
+    color:var(--mcol0); /* Text color from CSS variable */
 }
